@@ -8,6 +8,7 @@ import {
     useMediaQuery   // useMediaQuery hook
 } from "@mui/material";
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';    // EditOutlinedIcon component
+import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';    // CameraAltOutlinedIcon component
 import { useDispatch } from "react-redux";  // useDispatch hook
 import { Formik } from "formik"; 
 import * as Yup from "yup";     // Form validation library
@@ -208,7 +209,12 @@ const Form = () => {
                                                 >
                                                     <input {...getInputProps()} />
                                                     {!values.picture ? (
-                                                        <p>Add Picture Here</p>
+                                                        <FlexBetween>
+                                                            <Typography>
+                                                                Add Picture Here
+                                                            </Typography>
+                                                            <CameraAltOutlinedIcon />
+                                                        </FlexBetween>
                                                     ) : (
                                                         <FlexBetween>
                                                             <Typography>
